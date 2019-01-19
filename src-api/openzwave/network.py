@@ -857,7 +857,7 @@ class ZWaveNetwork(ZWaveObject):
 
         """
         result = 0
-        for node in self.nodes:
+        for node in self.nodes.values():
             if node.is_sleeping:
                 result += 1
         return result
